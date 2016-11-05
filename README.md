@@ -3,8 +3,6 @@
 This image extends the nginx:alpine image with the proxy configuration from [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy). While the configuration *should* be the same, not all features have been tested, so use at your own risk. 
 This repository is intended for private use, but is open sourced in case others find it helpful.
 
-There is a pre-compiled version of forego in the repository. This is because the standard forego binary is incompatible with Alpine Nginx, and bust be statically linked with certain libraries.
-
 ## Differences from upstream:
 
 Compared against [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy), the following runtime differences apply:
