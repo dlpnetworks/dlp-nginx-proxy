@@ -1,5 +1,20 @@
-![nginx 1.11.3](https://img.shields.io/badge/nginx-1.11.3-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg) [![Build Status](https://travis-ci.org/jwilder/nginx-proxy.svg?branch=master)](https://travis-ci.org/jwilder/nginx-proxy) [![](https://img.shields.io/docker/stars/jwilder/nginx-proxy.svg)](https://hub.docker.com/r/jwilder/nginx-proxy 'DockerHub') [![](https://img.shields.io/docker/pulls/jwilder/nginx-proxy.svg)](https://hub.docker.com/r/jwilder/nginx-proxy 'DockerHub')
+# dlp-nginx-proxy
 
+This image extends the nginx:alpine image with the proxy configuration from [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy). While the configuration *should* be the same, not all features have been tested, so use at your own risk. 
+This repository is intended for private use, but is open sourced in case others find it helpful.
+
+There is a pre-compiled version of forego in the repository. This is because the standard forego binary is incompatible with Alpine Nginx, and bust be statically linked with certain libraries.
+
+## Differences from upstream:
+
+Compared against [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy), the following runtime differences apply:
+  * **SSL certificate path defaults to $host.pem, before falling back to $host.crt.**
+    * **Original:** Only $host.crt is recognized.
+  * **A default host webpage is inserted to notify users of missing/invalid host configuration**
+
+## License
+
+All materials in this repository are licensed under the MIT License (see LICENSE for details)
 
 nginx-proxy sets up a container running nginx and [docker-gen][1].  docker-gen generates reverse proxy configs for nginx and reloads nginx when containers are started and stopped.
 

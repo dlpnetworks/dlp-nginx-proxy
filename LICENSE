@@ -1,3 +1,9 @@
+Modifications Copyright (C) 2015 David J. W. Li
+
+Based off nginx-proxy (https://github.com/jwilder/nginx-proxy) by Jason Wilder
+
+==============================================================================
+
 The MIT License (MIT)
 
 Copyright (c) 2014 Jason Wilder

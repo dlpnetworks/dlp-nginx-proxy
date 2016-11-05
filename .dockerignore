@@ -1,6 +1,13 @@
 .git
+.gitignore
+LICENSE
+VERSION
 .dockerignore
 circle.yml
 Makefile
 README.md
+Changelog.md
+Makefile
+build.sh
+docker-compose.yml
 test
